@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#0A0E17</color>
+    <color name="topbar">#0D1220</color>
+    <color name="card">#131A2A</color>
+    <color name="card2">#0F1522</color>
+    <color name="line">#232E47</color>
+    <color name="text">#E9EEF8</color>
+    <color name="muted">#8A94AB</color>
+    <color name="accent">#6D8DFF</color>
+    <color name="accent2">#8F6DFF</color>
+    <color name="danger">#FF6B7A</color>
+    <color name="warn">#FFB454</color>
+    <color name="ok">#3FD68F</color>
+    <color name="strength_off">#232E47</color>
+    <color name="icon_bg">#10182B</color>
+    <color name="chip_off">#338A94AB</color>
+    <color name="white">#FFFFFF</color>
+</resources>

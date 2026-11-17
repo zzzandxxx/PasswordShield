@@ -1,0 +1,20 @@
+# 极简构建产物
+build/
+*.apk
+*.aab
+*.idsig
+.gradle/
+local.properties
+
+# 签名密钥（不入库；build-apk.sh 首次构建会自动生成自签密钥）
+*.keystore
+*.jks
+
+# IDE
+.idea/
+*.iml
+captures/
+
+# OS
+.DS_Store
+Thumbs.db

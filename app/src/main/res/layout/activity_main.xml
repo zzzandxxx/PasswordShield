@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 门屏：创建主密码 / 解锁 -->
+    <LinearLayout
+        android:id="@+id/screenGate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/gateLogo"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_logo"
+            android:gravity="center"
+            android:text="🛡️"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/gateTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="@string/gate_unlock_title"
+            android:textColor="@color/text"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/gateSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp"
+            android:text="@string/gate_unlock_sub"
+            android:textColor="@color/muted"
+            android:textSize="13sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp">
+
+            <EditText
+                android:id="@+id/gatePw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edit"
+                android:hint="@string/hint_master"
+                android:inputType="textPassword"
+                android:padding="14dp"
+                android:paddingEnd="48dp"
+                android:textColor="@color/text"
+                android:textColorHint="@color/muted"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/gatePwEye"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="6dp"
+                android:background="@null"
+                android:contentDescription="@string/cd_show_pw"
+                android:src="@drawable/ic_eye"
+                android:tint="@color/muted" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/gateStrengthRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/gateStr0"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@color/strength_off" />
+
+            <View
+                android:id="@+id/gateStr1"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@color/strength_off" />
+
+            <View
+                android:id="@+id/gateStr2"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@color/strength_off" />
+
+            <View
+                android:id="@+id/gateStr3"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="1"
+                android:background="@color/strength_off" />
+
+            <TextView
+                android:id="@+id/gateStrLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:minWidth="76dp"
+                android:text="—"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/muted"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/gatePw2Wrap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp">
+
+            <EditText
+                android:id="@+id/gatePw2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edit"
+                android:hint="@string/hint_master_again"
+                android:inputType="textPassword"
+                android:padding="14dp"
+                android:paddingEnd="48dp"
+                android:textColor="@color/text"
+                android:textColorHint="@color/muted"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/gatePw2Eye"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="6dp"
+                android:background="@null"
+                android:contentDescription="@string/cd_show_pw"
+                android:src="@drawable/ic_eye"
+                android:tint="@color/muted" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/gateWarn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_warn"
+            android:lineSpacingExtra="4dp"
+            android:padding="12dp"
+            android:text="@string/gate_warn"
+            android:textColor="@color/warn"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/gateBtn"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/bg_btn_primary"
+            android:stateListAnimator="@null"
+            android:text="@string/btn_unlock"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/gateErr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/err_pw_wrong"
+            android:textColor="@color/danger"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/gateForgot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/gate_forgot"
+            android:textColor="@color/muted"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- 主界面 -->
+    <LinearLayout
+        android:id="@+id/screenMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/topbar"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_shield"
+                android:tint="@color/accent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:layout_weight="1"
+                android:text="@string/app_name"
+                android:textColor="@color/text"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnLockNow"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/bg_icon_btn"
+                android:contentDescription="@string/cd_lock"
+                android:src="@drawable/ic_unlock"
+                android:tint="@color/muted" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <FrameLayout
+            android:id="@+id/contentFrame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <include
+                android:id="@+id/screenGen"
+                layout="@layout/screen_gen" />
+
+            <include
+                android:id="@+id/screenVault"
+                layout="@layout/screen_vault"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/screenSettings"
+                layout="@layout/screen_settings"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/topbar"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="12dp">
+
+            <LinearLayout
+                android:id="@+id/tabGen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/tabGenIc"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:contentDescription="@string/tab_gen"
+                    android:src="@drawable/ic_key"
+                    android:tint="@color/accent" />
+
+                <TextView
+                    android:id="@+id/tabGenTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/tab_gen"
+                    android:textColor="@color/accent"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tabVault"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/tabVaultIc"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:contentDescription="@string/tab_vault"
+                    android:src="@drawable/ic_shield"
+                    android:tint="@color/muted" />
+
+                <TextView
+                    android:id="@+id/tabVaultTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/tab_vault"
+                    android:textColor="@color/muted"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tabSettings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/tabSettingsIc"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:contentDescription="@string/tab_settings"
+                    android:src="@drawable/ic_sliders"
+                    android:tint="@color/muted" />
+
+                <TextView
+                    android:id="@+id/tabSettingsTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/tab_settings"
+                    android:textColor="@color/muted"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

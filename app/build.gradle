@@ -1,0 +1,32 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.passwordshield'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.passwordshield"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+// 本项目刻意不使用任何第三方依赖：
+// 所有功能均基于 Android 框架 API 实现，保证代码可审计、无供应链风险。
+dependencies {
+}
